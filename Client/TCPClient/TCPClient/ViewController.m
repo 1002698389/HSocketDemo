@@ -129,7 +129,7 @@
 - (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag
 {
     NSLog(@"已发送Tag: %ld", tag);
-    
+    [_txtMessage setText:@""];
     [sock readDataWithTimeout:-1 tag:tag];
 }
 
